@@ -1,0 +1,23 @@
+spring:
+  application:
+    name: red
+  security:
+    oauth2:
+      client:
+        registration:
+          github:
+            clientId: ${GH_CLIENT_ID}
+            clientSecret: ${GH_CLIENT_SECRET}
+
+server:
+  port: ${RED_PORT:8080}
+  shutdown: GRACEFUL
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - info
+        - health
+
