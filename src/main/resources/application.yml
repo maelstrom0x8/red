@@ -10,7 +10,7 @@ spring:
             clientSecret: ${GH_CLIENT_SECRET}
 
 server:
-  port: ${RED_PORT:8080}
+  port: ${PORT:8080}
   shutdown: GRACEFUL
 
 management:

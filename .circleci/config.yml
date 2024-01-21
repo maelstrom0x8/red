@@ -13,7 +13,7 @@ jobs:
       - sdkman/setup-sdkman
       - sdkman/sdkman-install:
           candidate: java
-          version: 17.0.8-graalce
+          version: 21.0.8-graalce
       - run:
           name: "spring-boot:build-image"
           command: "./mvnw -Pnative spring-boot:build-image -DskipTests"
