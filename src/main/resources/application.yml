@@ -1,16 +1,14 @@
 spring:
   application:
     name: red
-  security:
-    oauth2:
-      client:
-        registration:
-          github:
-            clientId: ${GH_CLIENT_ID}
-            clientSecret: ${GH_CLIENT_SECRET}
-
+  datasource:
+    username: ${RED_DB_USER}
+    password: ${RED_DB_PASSWORD}
+    url: jdbc:postgresql://${RED_DB_HOST}:${RED_DB_PORT}/${RED_DATABASE}
+  jpa:
+    show-sql: true
+    generate-ddl: true
 server:
-  port: ${PORT:8080}
   shutdown: GRACEFUL
 
 management:

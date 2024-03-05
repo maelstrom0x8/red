@@ -1,0 +1,13 @@
+version: '3.1'
+
+
+services:
+  postgres:
+    container_name: red_postgres
+    image: postgres:15
+    ports:
+      - ${RED_DB_PORT}:5432
+    environment:
+      POSTGRES_USER: ${RED_DB_USER}
+      POSTGRES_PASSWORD: ${RED_DB_PASSWORD}
+      POSTGRES_DB: ${RED_DATABASE}

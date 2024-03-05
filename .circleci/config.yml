@@ -13,7 +13,7 @@ jobs:
       - sdkman/setup-sdkman
       - sdkman/sdkman-install:
           candidate: java
-          version: 21.0.1-graalce
+          version: 21-graalce
       - run:
           name: "spring-boot:build-image"
           command: "./mvnw -Pnative spring-boot:build-image -DskipTests"
@@ -22,7 +22,7 @@ jobs:
           docker-password: DOCKER_PASSWORD
       - docker/push:
           image: maelstrom0x8/red
-          tag: $CIRCLE_TAG-x86_64
+          tag: $CIRCLE_TAG
 
 
 workflows:
